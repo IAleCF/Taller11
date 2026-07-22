@@ -27,4 +27,40 @@ class SalaCine{
         }
         asientos.add(asiento);
     }
+    public Asiento buscarAsiento(String codigo) {
+        for (Asiento a : asientos) {
+            if (a.getCodigo().equals(codigo)) {
+                return a;
+            }
+        }
+        throw new NoSuchElementException("Asiento no encontrado: " + codigo);
+    }
+
+    public int contarDisponibles() {
+        int contador = 0;
+        for (Asiento a : asientos) {
+            if (!a.isOcupado()) {
+                contador++;
+            }
+        }
+        return contador;
+    }
+
+    public double calcularIngresoTotal() {
+        double total = 0.0;
+        for (Asiento a : asientos) {
+            if (a.isOcupado()) {
+                total += a.calcularPrecioBase();
+            }
+        }
+        return total;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getCapacidadMaxima() {
+        return capacidadMaxima;
+    }
 }
