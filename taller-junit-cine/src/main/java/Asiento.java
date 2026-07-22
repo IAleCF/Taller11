@@ -47,4 +47,9 @@ public class Asiento {
     public String getTipo() {
         return tipo;
     }
+
+    //METODOS ADICIONALES PARA TESTEAR
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 }
