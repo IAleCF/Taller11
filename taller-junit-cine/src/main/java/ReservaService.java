@@ -5,7 +5,7 @@ import javax.imageio.IIOException;
 public class ReservaService {
     private static final int MAX_ASIENTO_POR_COMPRA= 6;
     private SalaCine sala;
-    Public ReservaService(SalaCine sala){
+    public ReservaService(SalaCine sala){
         this.sala= sala;
     }
 
