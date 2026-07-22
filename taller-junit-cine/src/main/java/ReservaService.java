@@ -5,7 +5,7 @@ import javax.imageio.IIOException;
 public class ReservaService {
     private static final int MAX_ASIENTO_POR_COMPRA= 6;
     private SalaCine sala;
-    Public ReservaService(SalaCine sala){
+    public ReservaService(SalaCine sala){
         this.sala= sala;
     }
 
@@ -14,7 +14,7 @@ public class ReservaService {
             throw new IllegalArgumentException("Debe indicar al menos un asiento");
         }
         if (codigosAsientos.size() > MAX_ASIENTO_POR_COMPRA){   
-            throw new IllegalArgumentException("No se puede reservar mas de " + MAX_ASIENTO_POR_COMPRA + " Asientos por comprar")
+            throw new IllegalArgumentException("No se puede reservar mas de " + MAX_ASIENTO_POR_COMPRA + " Asientos por comprar");
         }
 
         double subtotal = 0.0;
