@@ -14,7 +14,7 @@ public class ReservaService {
             throw new IllegalArgumentException("Debe indicar al menos un asiento");
         }
         if (codigosAsientos.size() > MAX_ASIENTO_POR_COMPRA){   
-            throw new IllegalArgumentException("No se puede reservar mas de " + MAX_ASIENTO_POR_COMPRA + " Asientos por comprar")
+            throw new IllegalArgumentException("No se puede reservar mas de " + MAX_ASIENTO_POR_COMPRA + " Asientos por comprar");
         }
 
         double subtotal = 0.0;
